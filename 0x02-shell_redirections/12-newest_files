@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltp | grep -v "^d" | head -n 10
+ls -ltp | grep -v "^d$" | head -n 10
