@@ -1,2 +1,2 @@
 #!/bin/bash
-wc -R .
+find . -type d -not -path "." -not -path ".." | wc -l
