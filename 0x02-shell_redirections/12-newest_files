@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltp | awk 'NR>1 {print $9}' | head -n 10
+ls -lt | grep -v "^total" | grep -oE '[^ ]+$' | head -n 10
