@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltp | grep "^-" | head -n 10
+ls -ltp | awk 'NR>1 {print $9}' | head -n 10
