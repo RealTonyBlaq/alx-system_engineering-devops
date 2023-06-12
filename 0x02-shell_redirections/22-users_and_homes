@@ -1,2 +1,2 @@
 #!/bin/bash
-sort -k3 < ls -l /etc/passwd
+sort < ls -l /etc/passwd | cut -d' ' -f3,9
