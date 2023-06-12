@@ -1,2 +1,2 @@
 #!/bin/bash
-sort < ls -la /etc/passwd
+sort < ls -l /etc/passwd
