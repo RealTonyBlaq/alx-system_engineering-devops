@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Displays goodluck on 8th, badluck on 4th
+#+ Best School on other iterations
+
+luck=1
+while [ "$luck" -le 10 ]
+do
+	if ((luck == 4))
+	then
+		echo "bad luck"
+	elif ((luck == 8))
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((luck++))
+done
