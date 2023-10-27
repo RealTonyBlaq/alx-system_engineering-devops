@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Prints a string indefinitely with a 2-second delay
+#+ and then prints another string when it receives a SIGTERM signal
+
+handler() {
+	echo "I am invincible!!!"
+	exit 0
+}
+
+trap 'handler' SIGTERM
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
