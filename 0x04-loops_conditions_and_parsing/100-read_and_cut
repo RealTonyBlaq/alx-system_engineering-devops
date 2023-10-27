@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script displays the contents of /etc/passwd
+
+contents=$(cat < /etc/passwd)
+i=1
+l_count=$(cat < /etc/passwd | wc -l)
+while [ "$i" -le "$l_count" ]
+do
+	line=$(echo "$contents" | head -n $i | tail -n 1)
+	username=$(echo "$line" | cut -d ':' -f1)
+	user_id=$(echo "$line" | cut -d ':' -f3 | cut -d ':' -f1)
+	directory=$(echo "$line" | cut -d ':' -f6)
+	echo "$username:$user_id:$directory"
+	((i++))
+done
