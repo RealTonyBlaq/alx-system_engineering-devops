@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Script creates a file, displays some text then deletes
+#+ the file.
+
+echo $$ > /var/run/myscript.pid
+
+handle_sigterm() {
+	echo "I hate the kill command"
+}
+
+handle_sigint() {
+	echo "Y U no love me?!"
+}
+
+delete_file() {
+	rm /var/run/myscript.pid
+}
+
+trap 'handle_sigterm' SIGTERM
+trap 'handle_sigint' SIGINT
+trap 'delete_file' SIGQUIT, SIGTERM
+
+while true; do
+	echo "To infinity and beyond"
+done
