@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# This script displays the contents of /etc/passwd
+# This script displays only the USERNAME,
+#+ USER_ID and DIRECTORY from the contents of /etc/passwd file
 
 contents=$(cat < /etc/passwd)
 i=1
@@ -8,7 +9,7 @@ while [ "$i" -le "$l_count" ]
 do
 	line=$(echo "$contents" | head -n $i | tail -n 1)
 	username=$(echo "$line" | cut -d ':' -f1)
-	user_id=$(echo "$line" | cut -d ':' -f3 | cut -d ':' -f1)
+	user_id=$(echo "$line" | cut -d ':' -f3)
 	directory=$(echo "$line" | cut -d ':' -f6)
 	echo "$username:$user_id:$directory"
 	((i++))
