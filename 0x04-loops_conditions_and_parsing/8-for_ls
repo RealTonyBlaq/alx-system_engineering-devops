@@ -5,5 +5,5 @@
 list=$(ls)
 for file in $list
 do
-	echo $file | cut -d '-' -f2
+	echo "$file" | cut -d '-' -f2
 done
