@@ -16,9 +16,9 @@ delete_file() {
 	rm /var/run/myscript.pid
 }
 
-trap 'handle_sigterm' SIGTERM
+trap 'handle_sigterm ; delete_file' SIGTERM
 trap 'handle_sigint' SIGINT
-trap 'delete_file' SIGQUIT, SIGTERM
+trap 'delete_file' SIGQUIT
 
 while true; do
 	echo "To infinity and beyond"
