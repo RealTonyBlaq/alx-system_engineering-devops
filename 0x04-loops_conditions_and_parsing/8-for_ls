@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays files in the current directory
+#+ but removes the part before the "-" symbol
+
+list=$(ls)
+for file in $list
+do
+	echo $file | cut -d '-' -f2
+done
