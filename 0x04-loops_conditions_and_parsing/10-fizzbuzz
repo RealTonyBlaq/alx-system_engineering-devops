@@ -7,7 +7,7 @@
 num=1
 until [ "$num" -gt 100 ]
 do
-	if [ $((num % 3)) -eq 0 -a $((num % 5)) -eq 0 ]
+	if [ $((num % 3)) -eq 0 ] && [ $((num % 5)) -eq 0 ]
 	then
 		echo "FizzBuzz"
 	elif [ $((num % 3)) -eq 0 ]
