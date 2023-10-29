@@ -2,4 +2,4 @@
 # Script displays the occurence number, visitor's IP along with the HTTP status code
 #+ from the apache log file and sorts it in descending order
 
-awk '{ print $10, $1, $9 }' apache-access.log | sort -nr
+awk '{ print $10, $1, $9 }' apache-access.log | sort -gr
