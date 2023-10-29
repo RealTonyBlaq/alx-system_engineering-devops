@@ -8,7 +8,7 @@
 
 while IFS=':' read -r U PD Uid GID UIDI HD CMD
 do
-	echo -n "The user $U is part of the $GID gang, lives in $HD "
-	echo -n "and rides $CMD. $Uid's place is protected by the passcode "
-	echo "$PD, more info about the user here: $UIDI"
+	echo "The user $U is part of the $GID gang, lives in $HD \
+and rides $CMD. $Uid's place is protected by the passcode \
+$PD, more info about the user here: $UIDI"
 done </etc/passwd
