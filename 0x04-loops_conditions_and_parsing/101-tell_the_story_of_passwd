@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Script tells a story using the /etc/passwd file
+# The following abbreviations used in the source file are
+#+ expanded as:
+# U = Username , PD = password , UID = user_id
+#+ GID = group_id , UIDI = User_id info , HD = Home Directory
+#+ CMD = Command/shell
+
+while IFS=':' read -r U PD Uid GID UIDI HD CMD
+do
+	echo -n "The $U is part of the $GID gang, lives in $HD "
+	echo -n "and rides $CMD. $Uid's place is protected by the passcode "
+	echo "$PD, more info about the user here: $UIDI"
+done </etc/passwd
