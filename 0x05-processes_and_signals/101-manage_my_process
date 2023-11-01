@@ -7,23 +7,23 @@ else
 	case ${1} in
 	"start")
 		./manage_my_process &
-		sudo echo $$ > /var/run/my_process.pid
+		echo $$ > /var/run/my_process.pid
 		echo "manage_my_process started"
 		;;
 	"stop")
 		if [ -e /var/run/my_process.pid ]; then
 			kill -SIGTERM "$(pgrep -f "manage_my_process")"
-			sudo rm /var/run/my_process.pid
+			rm /var/run/my_process.pid
 		fi
 		echo "manage_my_process stopped"
 		;;
 	"restart")
 		if [ -e /var/run/my_process.pid ]; then
 			kill -SIGTERM "$(pgrep -f "manage_my_process")"
-			sudo rm /var/run/my_process.pid
+			rm /var/run/my_process.pid
 		fi
 		./manage_my_process &
-		sudo echo $$ > /var/run/my_process.pid
+		echo $$ > /var/run/my_process.pid
 		echo "manage_my_process restarted"
 		;;
 	*)
