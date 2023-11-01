@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 # Script manages another script "manage_my_process"
 
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 1 ]; then
 	echo "Usage: manage_my_process {start|stop|restart}"
 else
 	case ${1} in
 	"start")
 		./manage_my_process &
-		echo $$ > /var/run/my_process.pid
+		sudo echo $$ > /var/run/my_process.pid
 		echo "manage_my_process started"
 		;;
 	"stop")
 		if [ -e /var/run/my_process.pid ]; then
 			kill -SIGTERM "$(pgrep -f "manage_my_process")"
-			rm /var/run/my_process.pid
+			sudo rm /var/run/my_process.pid
 		fi
 		echo "manage_my_process stopped"
 		;;
 	"restart")
 		if [ -e /var/run/my_process.pid ]; then
 			kill -SIGTERM "$(pgrep -f "manage_my_process")"
-			rm /var/run/my_process.pid
+			sudo rm /var/run/my_process.pid
 		fi
 		./manage_my_process &
-		echo $$ > /var/run/my_process.pid
+		sudo echo $$ > /var/run/my_process.pid
 		echo "manage_my_process restarted"
 		;;
 	*)
