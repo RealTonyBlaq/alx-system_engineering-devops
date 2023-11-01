@@ -11,17 +11,13 @@ else
 		echo "manage_my_process started"
 		;;
 	"stop")
-		if [ -e /var/run/my_process.pid ]; then
-			kill -SIGTERM "$(pgrep -f "manage_my_process")"
-			rm /var/run/my_process.pid
-		fi
 		echo "manage_my_process stopped"
+		rm /var/run/my_process.pid
+		pkill -f "manage_my_process"
 		;;
 	"restart")
-		if [ -e /var/run/my_process.pid ]; then
-			kill -SIGTERM "$(pgrep -f "manage_my_process")"
-			rm /var/run/my_process.pid
-		fi
+		pkill -f "manage_my_process"
+		rm /var/run/my_process.pid
 		./manage_my_process &
 		echo $$ > /var/run/my_process.pid
 		echo "manage_my_process restarted"
