@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# Script changes the loopback IP address to 127.0.0.1
-#+ and changes facebook.com 's IP to 8.8.8.8 thereby
+# Script changes the loopback IP address from 127.0.0.1
+#+ to 127.0.0.2
+#+ and resolves facebook.com 's IP to 8.8.8.8 thereby
 #+ blocking it
 
-cat /etc/hosts | head -n 3 > oldhost
-echo "127.0.0.2		localhost" >> oldhost
-cat /etc/hosts | tail -n 8 >> oldhost
-echo "" >> oldhost
-echo "8.8.8.8		facebook.com" >> oldhost
-cat oldhost > /etc/hosts
+cat /etc/hosts | head -n 3 > ~/oldhost
+echo "127.0.0.2    localhost" >> ~/oldhost
+cat /etc/hosts | tail -n 8 >> ~/oldhost
+echo "" >> ~/oldhost
+echo "8.8.8.8    facebook.com" >> ~/oldhost
+cat ~/oldhost > /etc/hosts
