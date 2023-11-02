@@ -1,8 +1,31 @@
 #!/usr/bin/env bash
 # Script manages another script "manage_my_process"
 
-if [ "$#" -ne 1 ]; then
+case ${1} in
+"start")
+	./manage_my_process &
+	echo $! > /var/run/my_process.pid
+	echo "manage_my_process started"
+	;;
+"stop")
+	echo "manage_my_process stopped"
+	if [ -e /var/run/my_process.pid ]; then
+		rm /var/run/my_process.pid
+		pkill -f "manage_my_process"
+	fi
+	;;
+"restart")
+	if [ -e /var/run/my_process.pid ]; then
+		pkill -f "manage_my_process"
+		rm /var/run/my_process.pid
+	fi
+	./manage_my_process &
+	echo $! > /var/run/my_process.pid
+	echo "manage_my_process restarted"
+	;;
+*)
 	echo "Usage: manage_my_process {start|stop|restart}"
+<<<<<<< HEAD
 else
 	case ${1} in
 	"start")
@@ -27,3 +50,7 @@ else
 		;;
 	esac
 fi
+=======
+	;;
+esac
+>>>>>>> f22b38679e9c259ec733b278a12b85bdef73f44e
