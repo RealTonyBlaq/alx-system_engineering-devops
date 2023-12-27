@@ -1,3 +1,5 @@
+# Puppet creates a file with a content
+
 $str = "I love Puppet
 "
 
