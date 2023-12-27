@@ -1,4 +1,5 @@
-str = "I love Puppet"
+$str = "I love Puppet
+"
 
 file { '/tmp/school':
     ensure  => present,
