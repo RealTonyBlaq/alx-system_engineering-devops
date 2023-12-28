@@ -4,8 +4,8 @@ package {'werkzeug':
     ensure  => '2.1.1'
 }
 package {'Python3':
-    ensure   => '3.8.10',
-    
+    ensure  => '3.8.10',
+    require => Package['werkzeug']
 }
 
 package {'flask':
