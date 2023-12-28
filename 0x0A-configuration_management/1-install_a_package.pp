@@ -1,6 +1,6 @@
 # Puppet installs flask from pip3
 
-package { }
+package {'werkzeug'}
 package {'Python3':
     ensure   => '3.8.10'
 }
