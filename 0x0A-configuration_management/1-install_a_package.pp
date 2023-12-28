@@ -1,7 +1,7 @@
 # Puppet installs flask from pip3
 
-package { 'Python3-pip':
-    ensure   => 'installed',
+package { 'Python3':
+    ensure   => '',
 }
 
 package {'flask':
