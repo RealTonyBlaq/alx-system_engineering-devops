@@ -2,4 +2,4 @@
 
 # Script connects to an server using the private key in ~/.ssh/school
 
-ssh -i ~/.ssh/school ubuntu
+ssh ubuntu -i ~/.ssh/school
