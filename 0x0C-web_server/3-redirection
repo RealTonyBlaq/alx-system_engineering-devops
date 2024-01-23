@@ -11,7 +11,6 @@ sudo ufw allow 'Nginx HTTP'
 # creating a copy of the server configuration block
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/test.com
 
-sed -i "s/ default_server//" /etc/nginx/sites-available/test.com
-
+sudo sed -i '24i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 
 sudo service nginx restart
