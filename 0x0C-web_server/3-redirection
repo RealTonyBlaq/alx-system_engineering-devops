@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script to install nginx on a web server
+
+# Installing nginx
+sudo apt update
+sudo apt -y install nginx
+
+# configuring thee firewall to allow service
+sudo ufw allow 'Nginx HTTP'
+
+
+sudo service nginx restart
