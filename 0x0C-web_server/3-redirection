@@ -8,5 +8,5 @@ sudo apt -y install nginx
 # configuring thee firewall to allow service
 sudo ufw allow 'Nginx HTTP'
 
-
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/example.com
 sudo service nginx restart
