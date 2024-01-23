@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# Script transfers a file from a client to our server
+
+
