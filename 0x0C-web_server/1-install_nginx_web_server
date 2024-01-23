@@ -2,5 +2,5 @@
 # Script to install nginx on a web server
 
 
-sudo apt-get update
-
+sudo apt update
+sudo apt -y install 
