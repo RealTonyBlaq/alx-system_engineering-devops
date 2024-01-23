@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 # Script to install nginx on a web server
-    
+
+# Installing nginx
 sudo apt update
 sudo apt -y install nginx
+
+# configuring thee firewall to allow service
 sudo ufw allow 'Nginx HTTP'
+
+# Creating an html doc that prints Hello world when a GET
+#+ is made to the root
 sudo echo "Hello World!" > /var/www/html/index.html
 sudo service nginx restart
