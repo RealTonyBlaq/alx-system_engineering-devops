@@ -2,7 +2,10 @@
 
 $str = "Hello World!\n"
 
-exec 
+exec {'update_app-list':
+    command => '/bin
+
+}
 file {'/var/www/html/index.html':
     ensure  => present,
     mode    => '0644',
