@@ -10,7 +10,7 @@ sudo ufw allow 'Nginx HTTP'
 
 # Creating an html doc that prints Hello world when a GET
 #+ is made to the root
-sudo echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 
 # creating a copy of the server configuration block
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/test.com
@@ -19,7 +19,7 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/test.com
 sudo sed -i '24i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 
 # setting up a custom error 404 page
-sudo echo "Ceci n'est pas une page" > /var/www/html/error_404_page.html
+echo "Ceci n'est pas une page" > /var/www/html/error_404_page.html
 sudo sed -i "25i\      error_page 404 /error_404_page.html;" /etc/nginx/sites-available/default
 
 # Restarting the web server
