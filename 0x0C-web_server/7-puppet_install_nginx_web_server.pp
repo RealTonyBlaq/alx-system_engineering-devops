@@ -15,7 +15,7 @@ package {'nginx':
 
 file {'/var/www/html/index.html':
     ensure  => present,
-    content => '$str',
+    content => $str,
     require => Package['nginx'],
 }
 
