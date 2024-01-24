@@ -2,6 +2,7 @@
 
 $str = "Hello World!
 "
+
 file {'/var/www/html/index.html':
     enure   => present,
     mode    => '0766',
@@ -21,5 +22,6 @@ exec {'write_to_file':
 service {'nginx':
     ensure  => running,
     enable  => true,
-    require => 
+    require => File['/var/www/html/index.html'],
+    require => Exec['write_to_file'],
 }
