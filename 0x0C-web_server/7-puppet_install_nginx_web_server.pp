@@ -18,4 +18,8 @@ exec {'write_to_file':
     require => Package['nginx'],
 }
 
-service {'ngin}
+service {'nginx':
+    ensure  => running,
+    enable  => true,
+    
+}
