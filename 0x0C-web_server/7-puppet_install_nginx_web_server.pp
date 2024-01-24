@@ -2,6 +2,7 @@
 
 $str = "Hello World!\n"
 
+exec 
 file {'/var/www/html/index.html':
     ensure  => present,
     mode    => '0644',
@@ -14,11 +15,11 @@ package {'nginx':
 }
 
 exec {'write_to_file':
-    command => 'sudo /bin/sed -i "24i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default',
+    command => '/bin/sed -i "24i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default',
     require => Package['nginx'],
 }
 
 service {'nginx':
     ensure  => running,
-    require => ,
+    require => Package['nginx'],
 }
