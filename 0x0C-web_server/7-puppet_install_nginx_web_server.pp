@@ -4,10 +4,10 @@ $str = "Hello World!
 "
 
 file {'/var/www/html/index.html':
-    ensure   => present,
+    ensure  => present,
     mode    => '0766',
     content => $str,
-    ensure  => Package['nginx'],
+    require => Package['nginx'],
 }
 
 package {'nginx':
@@ -22,6 +22,5 @@ exec {'write_to_file':
 service {'nginx':
     ensure  => running,
     enable  => true,
-    require => File['/var/www/html/index.html'],
     require => Exec['write_to_file'],
 }
