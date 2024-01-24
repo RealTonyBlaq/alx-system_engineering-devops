@@ -1,6 +1,7 @@
 # puppet installs nginx and configures it
 
-$str = "Hello World!\n"
+$str = "Hello World!
+"
 
 exec {'update_app_list':
     command  => 'apt-get update',
