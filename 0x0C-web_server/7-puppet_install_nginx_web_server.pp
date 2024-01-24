@@ -11,3 +11,5 @@ file {'/var/www/html/index.html':
 package {'nginx':
     ensure => installed;
 }
+
+exec 
