@@ -3,7 +3,8 @@
 $str = "Hello World!
 "
 file {'/var/www/html/index.html':
-    enure => present;
+    enure   => present,
+    mode    => '0766'
 }
 
 package {'nginx':
