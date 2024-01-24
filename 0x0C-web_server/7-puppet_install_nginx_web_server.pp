@@ -3,9 +3,10 @@
 $str = "Hello World!\n"
 
 exec {'update_app-list':
-    command => '/bin
-
+    command     => 'sudo apt-get update',
+    provider    => 'shell',
 }
+
 file {'/var/www/html/index.html':
     ensure  => present,
     mode    => '0644',
@@ -15,6 +16,7 @@ file {'/var/www/html/index.html':
 
 package {'nginx':
     ensure => 'latest',
+    require =>
 }
 
 exec {'write_to_file':
