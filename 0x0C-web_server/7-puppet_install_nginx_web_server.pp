@@ -3,7 +3,7 @@
 $str = "Hello World!\n"
 
 exec {'update_app_list':
-    command  => 'sudo apt-get update',
+    command  => 'apt-get update',
     provider => 'shell',
 }
 
