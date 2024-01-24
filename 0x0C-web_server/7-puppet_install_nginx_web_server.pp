@@ -14,12 +14,11 @@ package {'nginx':
 }
 
 exec {'write_to_file':
-    command => 'sudo /bin/sed -i "24i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default'],
+    command => 'sudo /bin/sed -i "24i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default',
     require => Package['nginx'],
 }
 
 service {'nginx':
     ensure  => running,
-    enable  => true,
-    require => Exec['write_to_file'],
+    require => ,
 }
