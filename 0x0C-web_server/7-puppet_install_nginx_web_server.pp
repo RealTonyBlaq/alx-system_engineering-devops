@@ -5,7 +5,7 @@ $str = "Hello World!
 file {'/var/www/html/index.html':
     enure   => present,
     mode    => '0766',
-    content => $str
+    content => $str,
 }
 
 package {'nginx':
