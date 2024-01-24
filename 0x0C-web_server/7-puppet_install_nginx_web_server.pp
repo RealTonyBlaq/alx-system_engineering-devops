@@ -2,8 +2,8 @@
 
 $str = "Hello World!\n"
 
-exec {'update_app-list':
-    command     => 'sudo apt-get update',
+exec {'update_app_list':
+    command => 'sudo apt-get update',
     provider    => 'shell',
 }
 
@@ -15,8 +15,8 @@ file {'/var/www/html/index.html':
 }
 
 package {'nginx':
-    ensure => 'latest',
-    require =>
+    ensure  => 'latest',
+    require => Exec['update_app_list'],
 }
 
 exec {'write_to_file':
