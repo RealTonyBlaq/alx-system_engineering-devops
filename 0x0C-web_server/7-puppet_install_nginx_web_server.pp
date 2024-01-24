@@ -15,7 +15,7 @@ file {'/var/www/html/index.html':
 }
 
 package {'nginx':
-    ensure  => 'latest',
+    ensure  => installed,
     require => Exec['update_app_list'],
 }
 
