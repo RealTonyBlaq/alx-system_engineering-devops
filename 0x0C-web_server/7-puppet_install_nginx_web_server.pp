@@ -9,7 +9,6 @@ exec {'update_app_list':
 
 file {'/var/www/html/index.html':
     ensure  => present,
-    mode    => '0644',
     content => '$str',
     require => Package['nginx'],
 }
