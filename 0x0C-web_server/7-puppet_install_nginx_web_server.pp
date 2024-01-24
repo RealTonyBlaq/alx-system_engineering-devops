@@ -21,5 +21,5 @@ exec {'write_to_file':
 service {'nginx':
     ensure  => running,
     enable  => true,
-    
+    require => 
 }
