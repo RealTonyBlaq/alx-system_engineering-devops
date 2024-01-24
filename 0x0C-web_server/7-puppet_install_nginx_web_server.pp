@@ -7,15 +7,15 @@ exec {'update_app_list':
     provider => 'shell',
 }
 
+package {'nginx':
+    ensure  => installed,
+    require => Exec['update_app_list'],
+}
+
 file {'/var/www/html/index.html':
     ensure  => present,
     content => '$str',
     require => Package['nginx'],
-}
-
-package {'nginx':
-    ensure  => installed,
-    require => Exec['update_app_list'],
 }
 
 exec {'write_to_file':
