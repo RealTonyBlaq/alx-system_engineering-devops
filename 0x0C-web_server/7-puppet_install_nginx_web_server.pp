@@ -4,14 +4,14 @@ $str = "Hello World!
 "
 
 file {'/var/www/html/index.html':
-    enure   => present,
+    ensure   => present,
     mode    => '0766',
     content => $str,
     ensure  => Package['nginx'],
 }
 
 package {'nginx':
-    ensure => installed;
+    ensure => installed,
 }
 
 exec {'write_to_file':
