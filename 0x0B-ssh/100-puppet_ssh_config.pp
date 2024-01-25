@@ -7,12 +7,11 @@ file { '/etc/ssh/ssh_config':
 }
 
 # ssh_config.erb
-<%# Use Augeas to edit the SSH client configuration file %>
 <% require 'augeas' %>
 <% augeas = Augeas::open(nil, nil, Augeas::NO_MODL_AUTOLOAD) %>
 <% augeas.transform(:lens => 'Ssh.lns', :incl => '/etc/ssh/ssh_config') %>
 <% augeas.load %>
-<% augeas.set('/etc/ssh/ssh_config/Host[1]/IdentityFile', '~/.ssh/school') %>
-<% augeas.set('/files/home/your_username/.ssh/config/Host[1]/PasswordAuthentication', 'no') %>
+<% augeas.set('/files/etc/ssh/ssh_config/Host[1]/IdentityFile', '~/.ssh/school') %>
+<% augeas.set('/files/etc/ssh/ssh_config/Host[1]/PasswordAuthentication', 'no') %>
 <% augeas.save %>
 <% augeas.close %>
