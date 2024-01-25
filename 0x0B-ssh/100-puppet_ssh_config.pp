@@ -1,3 +1,6 @@
+# Puppet sets up Client ssh configuration to read public key
+#+ from a file without typing a password
+
 $config="
 #! ~/.ssh/config
 
