@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Script configures an nginx server so that it listens on port 80
-#+ but 
+# Script configures an nginx server so that it listens on port 80 but service (init) will say that nginx is not running
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+
