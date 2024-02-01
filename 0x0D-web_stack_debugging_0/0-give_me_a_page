@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Scrip fixes the response from a docker container to return a page
+#+ by starting the Apache server in the container
+service apache2 start
