@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Script configures an nginx server so that it listens on port 80 but service (init) will say that nginx is not running
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-available/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
 echo "" | sudo dd status=none of=/run/nginx.pid
