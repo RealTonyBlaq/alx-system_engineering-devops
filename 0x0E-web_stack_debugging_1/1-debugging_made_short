@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-#
+# Script configures an nginx server so that it listens on port 80
+#+ but 
