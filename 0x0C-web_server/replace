@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+old_string=" "
+new_string=""
+sed -i "s/${old_string}/${new_string}/" "$1"
+
+sed -i "6i\line added" "$1"
