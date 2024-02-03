@@ -9,7 +9,7 @@ countdown() {
     sleep $interval
   done
 
-  printf "\nTime's up!\n"
+  printf "\nTime's up!\n
 }
 
 # Set the countdown duration (e.g., 10 seconds)
