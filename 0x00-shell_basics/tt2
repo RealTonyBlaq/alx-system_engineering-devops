@@ -17,3 +17,4 @@ countdown_duration=11
 
 # Call the countdown function with the duration
 countdown $countdown_duration
+..
