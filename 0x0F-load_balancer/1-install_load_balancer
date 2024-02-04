@@ -8,8 +8,12 @@ host=$(hostname)
 # updating apt list
 sudo apt update
 
-# installing Nginx web server
+# installing Nginx web server and allowing firewall
 sudo apt -y install nginx
 sudo ufw allow 'Nginx HTTP'
+
+# Setting up the web server to add a custom header to it's HTTP response
 sudo sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-available/default
+
+
 sudo service nginx restart
