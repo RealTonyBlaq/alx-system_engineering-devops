@@ -20,3 +20,5 @@ sudo service nginx restart
 
 # installing the load balancer
 sudo apt install haproxy
+
+# Setting up the load balancer to manage web-01 and web-02
