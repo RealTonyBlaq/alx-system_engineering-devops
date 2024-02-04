@@ -15,5 +15,5 @@ sudo ufw allow 'Nginx HTTP'
 # Setting up the web server to add a custom header to it's HTTP response
 sudo sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-available/default
 
-
+# Restarting the server for the configuration to take effect
 sudo service nginx restart
