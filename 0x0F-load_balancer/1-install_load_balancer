@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script configures a brand new ubuntu machine web server to add a custom header 'X-Served-By' with hostname as value
+host=$(hostname)
+sudo apt update
+sudo apt -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-available/default
+sudo service nginx restart
