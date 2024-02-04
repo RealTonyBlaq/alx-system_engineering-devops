@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Script configures a web server to add a custom header 'X-Served-By'
+# Script configures a web server to add a custom header 'X-Served-By' with value as h
 host=$(hostname)
 sudo sed -i '45i\       add_header X-Served-By "${hostname};"' /etc/snginx/sites-available/default
