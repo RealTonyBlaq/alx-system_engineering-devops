@@ -18,4 +18,5 @@ sudo sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-
 # Restarting the server for the configuration to take effect
 sudo service nginx restart
 
+# installing the load balancer
 sudo apt install haproxy
