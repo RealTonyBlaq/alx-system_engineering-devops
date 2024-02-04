@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script configures a brand new ubuntu machine,
 #+ installs a web server to add a custom header 'X-Served-By' with hostname as value
-#+ and also installs a load balancer
+#+ and also installs a load balancer.
 
 host=$(hostname)
 
