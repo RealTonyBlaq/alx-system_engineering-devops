@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Script configures a web server to add a custom header 'X-Served-By'
+host=$(hostname)
 sudo sed -i '45i\       add_header X-Served-By "hostname"
