@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# Script configures a web server to add a custom header 'X-Served-By'
