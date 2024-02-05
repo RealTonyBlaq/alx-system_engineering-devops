@@ -1,5 +1,8 @@
 # Puppet installs Nginx and adds a new header 'X-Served-By'
 
+file {'
+
+}
 
 exec {'read_hostname':
     command  => 'hostname',
