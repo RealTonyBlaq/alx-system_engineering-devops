@@ -1,22 +1,5 @@
 #!/usr/bin/env bash
-# Script configures a brand new ubuntu machine,
-#+ installs a web server to add a custom header 'X-Served-By' with hostname as value
-#+ and also installs a load balancer.
-
-host=$(hostname)
-
-# updating apt list
-sudo apt update
-
-# installing Nginx web server and allowing firewall
-sudo apt -y install nginx
-sudo ufw allow 'Nginx HTTP'
-
-# Setting up the web server to add a custom header to it's HTTP response
-sudo sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-available/default
-
-# Restarting the server for the configuration to take effect
-sudo service nginx restart
+# Script configures a brand new ubuntu machine and sets up HAProxy
 
 # installing the load balancer
 sudo apt install haproxy
