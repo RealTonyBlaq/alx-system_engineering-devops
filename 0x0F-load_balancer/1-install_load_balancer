@@ -5,6 +5,7 @@
 sudo apt install haproxy
 
 # Setting up the load balancer to manage servers web-01 and web-02
+# shellcheck disable=
 sudo echo "" >> /etc/haproxy/haproxy.cfg
 sudo sed -i "35i\backend web-backend\n        balance roundrobin\n        server web-01 54.152.133.156:80 check\n        server web-02 54.165.176.3:80 check" /etc/haproxy/haproxy.cfg
 
