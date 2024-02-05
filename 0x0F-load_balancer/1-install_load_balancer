@@ -9,9 +9,5 @@ sudo apt install haproxy
 sudo echo "" >> /etc/haproxy/haproxy.cfg
 sudo sed -i "35i\backend web-backend\n        balance roundrobin\n        server web-01 54.152.133.156:80 check\n        server web-02 54.165.176.3:80 check" /etc/haproxy/haproxy.cfg
 
-# Enabling firewall
-sudo ufw allow 80
-sudo ufw allow 443
-
 # Restarting the load balancer.
 sudo service haproxy restart
