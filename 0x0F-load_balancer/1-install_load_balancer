@@ -13,5 +13,5 @@ sudo sed -i "35i\backend web-backend\n        balance roundrobin\n        server
 sudo ufw allow 80
 sudo ufw allow 443
 
-# Restarting the load balancer
+# Restarting the load balancer.
 sudo service haproxy restart
