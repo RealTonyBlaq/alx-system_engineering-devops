@@ -1,9 +1,9 @@
 # Puppet installs Nginx and adds a new header 'X-Served-By'
 
-exec {'read_hostname':
+$host_name = exec {'read_hostname':
     command  => 'hostname',
     provider => 'shell',
-    logout   => true,
+    logoutput   => true,
 }
 
 exec { 'get_variable_value':
@@ -14,4 +14,3 @@ exec { 'get_variable_value':
   notify      => Notify['variable_notification'],
 }
 
-$host_name = exec('/path/to/your/output/file').content
