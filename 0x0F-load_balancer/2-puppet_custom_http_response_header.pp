@@ -1,4 +1,4 @@
-# Puppet installs Nginx and adds a new header 'X-Served-By' 
+# Puppet installs Nginx and adds a new header 'X-Served-By'.
 
 $host_name = exec {'read_hostname':
     command   => 'hostname',
