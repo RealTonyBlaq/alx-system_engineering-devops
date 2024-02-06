@@ -9,7 +9,7 @@ exec {'read_hostname':
     command  => 'hostname',
     provider => 'shell',
     logout   => true,
-    refresh
+    refreshonly => true,
 }
 
 exec { 'get_variable_value':
