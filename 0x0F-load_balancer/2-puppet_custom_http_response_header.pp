@@ -1,4 +1,4 @@
-# Puppet installs Nginx and adds a new header 'X-Served-By'.
+# Puppet installs Nginx and adds a new header 'X-Served-By'
 
 exec {'apt_update':
     command  => 'apt update',
