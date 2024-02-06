@@ -11,5 +11,5 @@ package {'nginx':
 }
 
 exec {'add_config':
-    
+    command => '
 }
