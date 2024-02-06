@@ -9,4 +9,3 @@ $host_name = exec {'read_hostname':
 package {'nginx':
     ensure  => 'installed',
 }
-
