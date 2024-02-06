@@ -7,7 +7,7 @@ exec { 'update_applist':
 
 package { 'nginx':
         ensure  => 'installed',
-        require => Exec['update system'],
+        require => Exec['update_applist'],
 }
 
 exec {'HTTP header':
