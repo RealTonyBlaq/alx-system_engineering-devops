@@ -1,7 +1,7 @@
 # Puppet installs Nginx and adds a new header 'X-Served-By'
 
 
-exec { 'update system':
+exec { 'update_applist':
         command => '/usr/bin/apt-get update',
 }
 
@@ -17,5 +17,5 @@ exec {'HTTP header':
 
 service {'nginx':
         ensure  => running,
-        require => Package['nginx']
+        require => Package['nginx'],
 }
