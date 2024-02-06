@@ -10,4 +10,6 @@ exec {'add_config':
     require => Package['nginx'],
 }
 
-service {'nginx}
+service {'nginx':
+    ensure
+}
