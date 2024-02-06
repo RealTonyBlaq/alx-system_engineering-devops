@@ -14,4 +14,4 @@ exec { 'get_variable_value':
   notify      => Notify['variable_notification'],
 }
 
-$my_variable = file('/path/to/your/output/file').content
+$host_name = exec('/path/to/your/output/file').content
