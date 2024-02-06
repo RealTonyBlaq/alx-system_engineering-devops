@@ -11,5 +11,6 @@ exec {'add_config':
 }
 
 exec {'restart_nginx':
-    command => '
+    command => 'service nginx restart',
+    
 }
