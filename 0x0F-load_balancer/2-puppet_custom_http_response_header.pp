@@ -6,5 +6,7 @@ $host_name = exec {'read_hostname':
     logoutput   => true,
 }.content
 
-package {}
+package {'nginx':
+    ensure  => 'installed',
+}
 
