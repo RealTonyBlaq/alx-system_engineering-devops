@@ -4,7 +4,7 @@ $host_name = exec {'read_hostname':
     command   => 'hostname',
     provider  => 'shell',
     logoutput => true,
-}.content
+}
 
 package {'nginx':
     ensure  => 'installed',
