@@ -1,22 +1,30 @@
 # Puppet installs Nginx and adds a new header 'X-Served-By'
 
-exec {'apt_update':
-    command  => 'apt update',
-    provider => 'shell',
+
+exec { 'update system':
+        command => '/usr/bin/apt-get update',
 }
 
-package {'nginx':
-    ensure  => 'installed',
-    require => Exec['apt_update'],
+package { 'nginx':
+        ensure  => 'installed',
+        require => Exec['update system']
 }
 
-exec {'add_config':
-    command  => 'sed -i "45i\\        add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default',
-    provider => 'shell',
-    require  => Package['nginx'],
+file {'/var/www/html/index.html':
+        content => 'Hello World!'
+}
+
+exec {'redirect_me':
+        command  => 'sed -i "24i\         rewrite ^ https://th3-grOOt.tk/ permanent;" /etc/nginx/sites-available/default',
+        provider => 'shell'
+}
+
+exec {'HTTP header':
+        command  => 'sed -i "25i\          add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default',
+        provider => 'shell'
 }
 
 service {'nginx':
-    ensure  => running,
-    require => Package['nginx'],
+        ensure  => running,
+        require => Package['nginx']
 }
