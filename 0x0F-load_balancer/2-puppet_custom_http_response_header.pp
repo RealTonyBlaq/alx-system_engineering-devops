@@ -11,5 +11,6 @@ exec {'add_config':
 }
 
 service {'nginx':
-    ensure
+    ensure  => running,
+    require => Package['nginx'],
 }
