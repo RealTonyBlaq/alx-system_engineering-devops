@@ -10,3 +10,6 @@ exec {'add_config':
     ensure => Package['nginx'],
 }
 
+exec {'restart_nginx':
+    
+}
