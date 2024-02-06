@@ -2,7 +2,6 @@
 
 package {'nginx':
     ensure  => 'installed',
-    ensure  => running;
 }
 
 exec {'add_config':
@@ -10,3 +9,4 @@ exec {'add_config':
     provider => 'shell',
     ensure => Package['nginx'],
 }
+
