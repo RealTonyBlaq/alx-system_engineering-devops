@@ -7,12 +7,12 @@ exec { 'update system':
 
 package { 'nginx':
         ensure  => 'installed',
-        require => Exec['update system']
+        require => Exec['update system'],
 }
 
 exec {'HTTP header':
         command  => 'sed -i "25i\          add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default',
-        provider => 'shell'
+        provider => 'shell',
 }
 
 service {'nginx':
