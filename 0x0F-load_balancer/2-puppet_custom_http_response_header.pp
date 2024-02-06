@@ -11,7 +11,7 @@ package {'nginx':
 }
 
 exec {'add_config':
-    command  => 'sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-available/default',
+    command  => 'host=$(hostname) && sed -i "45i\\        add_header X-Served-By \"${host}\";" /etc/nginx/sites-available/default',
     provider => 'shell',
     ensure => Package['nginx'],
 }
