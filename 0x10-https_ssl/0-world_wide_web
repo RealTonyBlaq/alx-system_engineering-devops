@@ -5,7 +5,7 @@ subdomains=("www" "lb-01" "web-01" "web-02")
 dig_function() {
 	local domain="$1"
 
-	dig "$domain"
+	dig "$domain" |grep 
 }
 if [ -z "$2" ]; then
 	for subdomain in "${subdomains[@]}"; do
