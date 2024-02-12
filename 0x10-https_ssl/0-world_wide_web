@@ -8,4 +8,5 @@ dig_function() {
 	dig "$domain"
 }
 if [ -z "$2" ]; then
-	for subdomain in 
+	for subdomain in "$subdomains"; do
+		echo "$subdomain
