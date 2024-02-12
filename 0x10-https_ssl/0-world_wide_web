@@ -13,6 +13,6 @@ if [ -z "$2" ]; then
 		dig_function "$URL"
 	done
 else
-	URL="${!2}.${domain}"
+	URL="${2}.${domain}"
 	dig_function "$URL"
 fi
