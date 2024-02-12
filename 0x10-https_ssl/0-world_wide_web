@@ -10,6 +10,6 @@ dig_function() {
 if [ -z "$2" ]; then
 	for subdomain in "${subdomains[@]}"; do
 		URL="${subdomain}.${domain}"
-		echo "$URL"
+		dig_function "$URL"
 	done
 fi
