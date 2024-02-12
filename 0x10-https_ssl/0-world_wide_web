@@ -8,4 +8,4 @@ dig_function() {
 	dig "$domain"
 }
 if [ -z "$2" ]; then
-	di
+	
