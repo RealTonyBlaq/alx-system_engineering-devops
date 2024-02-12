@@ -7,7 +7,7 @@ dig_function() {
 	local subdomain="$2"
 
 	echo -n "The subdomain $subdomain "
-	dig "$domain" | sed -n "13p" | awk '{print "is a", $4, "record and points to", $5}'
+	dig "$domain" | sed -n "13p" | awk -v sd'{print "is a", $4, "record and points to", $5}'
 }
 if [ -z "$2" ]; then
 	for subdomain in "${subdomains[@]}"; do
