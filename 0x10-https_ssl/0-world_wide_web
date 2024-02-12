@@ -4,7 +4,7 @@ domain="$1"
 subdomains=("www" "lb-01" "web-01" "web-02")
 dig_function() {
 	local domain="$1"
-	local 
+	local subdomain="$2"
 }
 if [ -z "$2" ]; then
 	di
