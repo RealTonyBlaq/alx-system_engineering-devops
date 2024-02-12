@@ -2,6 +2,8 @@
 # Script displays information about subdomains
 domain="$1"
 subdomains=("www" "lb-01" "web-01" "web-02")
-dig_
+dig_function() {
+	local 
+}
 if [ -z "$2" ]; then
 	di
