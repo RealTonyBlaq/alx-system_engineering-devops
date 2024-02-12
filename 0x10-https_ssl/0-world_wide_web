@@ -3,6 +3,7 @@
 domain="$1"
 subdomains=("www" "lb-01" "web-01" "web-02")
 dig_function() {
+	local domain="$1"
 	local 
 }
 if [ -z "$2" ]; then
