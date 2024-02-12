@@ -12,4 +12,5 @@ if [ -z "$2" ]; then
 		URL="${subdomain}.${domain}"
 		dig_function "$URL"
 	done
-fi
+else
+	
