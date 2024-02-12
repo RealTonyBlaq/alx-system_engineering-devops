@@ -5,7 +5,8 @@ subdomains=("www" "lb-01" "web-01" "web-02")
 dig_function() {
 	local domain="$1"
 	local subdomain="$2"
-	echo -n "
+
+	echo -n "The subdomain $subdomain "
 	dig "$domain" | sed -n "13p" | awk '{print "is a", $4, "record and points to", $5}'
 }
 if [ -z "$2" ]; then
