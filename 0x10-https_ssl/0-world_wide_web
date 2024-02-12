@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Script displays information about subdomains
+domain="$1"
 if [ -z "$2" ]; then
 	di
