@@ -13,4 +13,4 @@ if [ -z "$2" ]; then
 		dig_function "$URL"
 	done
 else
-	
+	URL="${!1}.${}
