@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-if []
+if [ -z "$1" ]; then
+	echo ""
+else
+	
