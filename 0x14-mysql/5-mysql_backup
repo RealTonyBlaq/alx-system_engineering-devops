@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# backup database in compress tar.gz format
+# script generates a MySQL dump and creates a compressed archive out of it.
 
-# variables declarations
 day=$(date +"%d")
 month=$(date +"%m")
 year=$(date +"%Y")
