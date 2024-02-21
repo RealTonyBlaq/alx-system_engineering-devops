@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # script generates a MySQL dump and creates a compressed archive out of it.
 
-day=$(date +"%d")
-month=$(date +"%m")
+dd=$(date +"%d")
+mm=$(date +"%m")
 year=$(date +"%Y")
 file="$day-$month-$year.tar.gz"
 
