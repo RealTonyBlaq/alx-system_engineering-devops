@@ -21,5 +21,5 @@ if __name__ == "__main__":
         file = "USER_ID.csv"
         for dic in todos:
             if (dic['userId']) == id:
-                dump = ()
+                dump = (id, name, str(dic['completed']))
                 
