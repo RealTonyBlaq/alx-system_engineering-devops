@@ -21,7 +21,7 @@ if __name__ == "__main__":
         title = []
         for dic in todos:
             for key in dic.keys():
-                if (key['userId'] == id:
+                if (key['userId']) == id:
                     tasks += 1
                     if key['completed'] == True:
                         completed += 1
