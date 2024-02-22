@@ -4,7 +4,7 @@ and returns information about his/her TODO list progress
 """
 
 import requests
-i
+from sys import argv
 
 
 
