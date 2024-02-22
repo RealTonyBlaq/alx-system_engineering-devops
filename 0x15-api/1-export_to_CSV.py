@@ -18,10 +18,7 @@ if __name__ == "__main__":
         url = "https://jsonplaceholder.typicode.com"
         name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
         todos = requests.get("{}/{}".format(url, "todos")).json()
-        tasks = 0
-        completed = 0
-        titles = []
+        export =
         for dic in todos:
             if (dic['userId']) == id:
                 
-        
