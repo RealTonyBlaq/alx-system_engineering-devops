@@ -6,6 +6,7 @@ and exports it to CSV using a format
 
 import requests
 from sys import argv
+import csv
 
 
 if __name__ == "__main__":
