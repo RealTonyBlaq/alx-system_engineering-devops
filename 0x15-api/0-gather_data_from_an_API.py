@@ -18,10 +18,12 @@ if __name__ == "__main__":
         todos = requests.get("{}/{}".format(url, "todos")).json()
         tasks = 0
         tasks_completed = 0
+        title = []
         for dic in todos:
             for key in dic.keys():
                 if key['userId'] == id:
                     tasks += 1
                     if key['completed'] == True:
                         tasks_completed += 1
+                        
     
