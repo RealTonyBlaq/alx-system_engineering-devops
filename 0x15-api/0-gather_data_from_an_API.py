@@ -8,7 +8,8 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    print(len(argv))
+    if len(argv) != 2:
+        print("Usa")
     id = int(argv[1])
     REST_API = "https://jsonplaceholder.typicode.com/todos/{}".format(id)
     r = requests.get(REST_API)
