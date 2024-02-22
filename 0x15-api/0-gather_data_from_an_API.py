@@ -18,7 +18,7 @@ if __name__ == "__main__":
         todos = requests.get("{}/{}".format(url, "todos")).json()
         tasks = 0
         completed = 0
-        title = []
+        titles = []
         for dic in todos:
             if (dic['userId']) == id:
                 tasks += 1
@@ -26,4 +26,4 @@ if __name__ == "__main__":
                     completed += 1
                     title.append(dic['title'])
     print(f"Employee {name} is done with tasks({completed}/{tasks}):")
-    [print("     {}".format(t)) for t in title]
+    [print("     {}".format(title)) for title in titles]
