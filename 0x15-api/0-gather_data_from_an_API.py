@@ -6,5 +6,5 @@ and returns information about his/her TODO list progress
 import requests
 from sys import argv
 
-
+REST_API = "https://jsonplaceholder.typicode.com/todos/{}"
 r = requests()
