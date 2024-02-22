@@ -13,6 +13,6 @@ if __name__ == "__main__":
         exit(1)
     else:
         id = int(argv[1])
-        REST_API = "https://jsonplaceholder.typicode.com/t/{}".format(id)
-        r = requests.get(REST_API)
+        url = "https://jsonplaceholder.typicode.com"
+        r = requests.get(url)
         print(r.text)
