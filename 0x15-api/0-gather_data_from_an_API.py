@@ -14,5 +14,4 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com/{}/{}"
-        r = requests.get(url.format("users", id))
-        print(r.json())
+        empl = requests.get(url.format("users", id)).json()
