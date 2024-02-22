@@ -10,4 +10,4 @@ from sys import argv
 id = int(argv[1])
 REST_API = "https://jsonplaceholder.typicode.com/todos/{}".format(id)
 r = requests.get(REST_API)
-print(r.json())
+print(r.text)
