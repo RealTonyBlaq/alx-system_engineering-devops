@@ -24,3 +24,4 @@ if __name__ == "__main__":
                     tasks += 1
                     if key['completed'] == True:
                         tasks_completed += 1
+        
