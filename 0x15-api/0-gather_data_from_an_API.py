@@ -27,4 +27,4 @@ if __name__ == "__main__":
                         completed += 1
                         title.append(key['title'])
     print(f"Employee {name} is done with tasks({completed}/{tasks}):")
-    print("")
+    print("     {}".format()) for 
