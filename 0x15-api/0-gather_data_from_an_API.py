@@ -15,4 +15,4 @@ if __name__ == "__main__":
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com/{}/{}"
         employee = requests.get(url.format("users", id)).json()
-        URL
+        todos = requests.get(url)
