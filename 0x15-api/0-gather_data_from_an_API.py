@@ -13,6 +13,6 @@ if __name__ == "__main__":
         exit(1)
     else:
         id = int(argv[1])
-        url = "https://jsonplaceholder.typicode.com"
+        url = "https://jsonplaceholder.typicode.com/{}/{}"
         json = requests.get(url)
         print(r.json())
