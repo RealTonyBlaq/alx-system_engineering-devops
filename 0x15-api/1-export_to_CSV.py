@@ -19,8 +19,5 @@ if __name__ == "__main__":
         name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "USER_ID.csv"
-        for dic in todos:
-            if (dic['userId']) == id:
-                dump = (id, name, str(dic['completed']), dic['title'])
-                with open(file, '+a') as f:
-                    f.write(csv.writer(dump))
+        with open(file, '+a') as f:
+            f.write(csv.writer(dump))
