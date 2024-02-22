@@ -22,5 +22,7 @@ if __name__ == "__main__":
         with open(file, '+a') as f:
             writer = csv.writer(f)
             for dic in todos:
-            if (dic['userId']) == id:
-                dump = (id, name, str(dic['completed']), dic['title'])
+                if (dic['userId']) == id:
+                    dump = (id, name, str(dic['completed']), dic['title'])
+                    wr
+                    
