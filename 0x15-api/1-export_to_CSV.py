@@ -24,5 +24,4 @@ if __name__ == "__main__":
             for dic in todos:
                 if (dic['userId']) == id:
                     dump = (id, name, str(dic['completed']), dic['title'])
-                    wr
-                    
+                    writer.writerows(dump)
