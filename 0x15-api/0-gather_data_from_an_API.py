@@ -22,8 +22,8 @@ if __name__ == "__main__":
         for dic in todos:
             if (dic['userId']) == id:
                 tasks += 1
-                if dic['completed'] == True:
+                if dic['completed'] is True:
                     completed += 1
-                    title.append(dic['title'])
+                    titles.append(dic['title'])
     print(f"Employee {name} is done with tasks({completed}/{tasks}):")
     [print("     {}".format(title)) for title in titles]
