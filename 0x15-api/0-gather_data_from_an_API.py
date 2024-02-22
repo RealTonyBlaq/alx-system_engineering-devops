@@ -10,9 +10,9 @@ from sys import argv
 if __name__ == "__main__":
     if len(argv) != 2:
         print("Usage: ./0-gather_data_from_an_API.py <employee_ID>")
-        return None
+        exit 1
     else:
         id = int(argv[1])
-    REST_API = "https://jsonplaceholder.typicode.com/todos/{}".format(id)
-    r = requests.get(REST_API)
-    print(r.text)
+        REST_API = "https://jsonplaceholder.typicode.com/todos/{}".format(id)
+        r = requests.get(REST_API)
+        print(r.text)
