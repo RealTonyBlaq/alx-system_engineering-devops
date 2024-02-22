@@ -14,5 +14,5 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com"
-        r = requests.get(url)
-        print(r.text)
+        json = requests.get(url)
+        print(r.json())
