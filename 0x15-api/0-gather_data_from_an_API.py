@@ -14,4 +14,5 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com/{}/{}"
-        empl = requests.get(url.format("users", id)).json()
+        employee = requests.get(url.format("users", id)).json()
+        URL
