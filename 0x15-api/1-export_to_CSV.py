@@ -14,7 +14,7 @@ if __name__ == "__main__":
         print("Usage: ./0-gather_data_from_an_API.py <employee_ID>")
         exit(1)
     else:
-        id = argv[1]
+        id = (argv[1]
         url = "https://jsonplaceholder.typicode.com"
         name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
         todos = requests.get("{}/{}".format(url, "todos")).json()
@@ -23,5 +23,5 @@ if __name__ == "__main__":
             writer = csv.writer(f)
             for dic in todos:
                 if (dic['userId']) == id:
-                    dump = [id, name, dic['completed']), str(dic['title'])]
+                    dump = [id, name, dic['completed'], dic['title']]
                     writer.writerow(dump)
