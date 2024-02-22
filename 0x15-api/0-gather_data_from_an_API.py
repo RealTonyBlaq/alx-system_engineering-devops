@@ -26,4 +26,4 @@ if __name__ == "__main__":
                     if key['completed'] == True:
                         tasks_completed += 1
                         title.append(key['title'])
-    print("Employee {} ")
+    print(f"Employee {name} is done with tasks")
