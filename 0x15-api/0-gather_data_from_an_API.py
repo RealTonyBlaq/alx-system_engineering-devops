@@ -13,7 +13,7 @@ if __name__ == "__main__":
         exit(1)
     else:
         id = int(argv[1])
-        url = "https://jsonplaceholder.typicode.com/"
-        employee = requests.get("{}/{}".format("users", id)).json()
+        url = "https://jsonplaceholder.typicode.com"
+        employee = requests.get("{}/{}/{}".format(url, "users", id)).json()
         todos = requests.get(url.format("todos", None))
         print(todos.json())
