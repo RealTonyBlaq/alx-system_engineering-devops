@@ -9,7 +9,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usa")
+        print("Usage: ./0-gather_data_r")
     id = int(argv[1])
     REST_API = "https://jsonplaceholder.typicode.com/todos/{}".format(id)
     r = requests.get(REST_API)
