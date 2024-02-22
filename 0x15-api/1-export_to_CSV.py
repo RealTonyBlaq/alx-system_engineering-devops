@@ -23,5 +23,5 @@ if __name__ == "__main__":
             writer = csv.writer(f)
             for dic in todos:
                 if (dic['userId']) == id:
-                    dump = [id, str(name), str(dic['completed']), str(dic['title'])]
+                    dump = [id, name, dic['completed']), str(dic['title'])]
                     writer.writerow(dump)
