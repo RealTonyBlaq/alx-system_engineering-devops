@@ -7,4 +7,4 @@ import requests
 from sys import argv
 
 
-
+r = requests()
