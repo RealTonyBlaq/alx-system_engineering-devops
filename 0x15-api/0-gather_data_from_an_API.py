@@ -17,13 +17,13 @@ if __name__ == "__main__":
         name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
         todos = requests.get("{}/{}".format(url, "todos")).json()
         tasks = 0
-        tasks_completed = 0
+        completed = 0
         title = []
         for dic in todos:
             for key in dic.keys():
                 if key['userId'] == id:
                     tasks += 1
                     if key['completed'] == True:
-                        tasks_completed += 1
+                        completed += 1
                         title.append(key['title'])
-    print(f"Employee {name} is done with tasks")
+    print(f"Employee {name} is done with tasks()")
