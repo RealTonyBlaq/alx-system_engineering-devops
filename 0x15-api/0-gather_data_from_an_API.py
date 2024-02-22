@@ -20,11 +20,10 @@ if __name__ == "__main__":
         completed = 0
         title = []
         for dic in todos:
-            for key in dic.keys():
-                if (key['userId']) == id:
-                    tasks += 1
-                    if key['completed'] == True:
-                        completed += 1
-                        title.append(key['title'])
+            if (dic['userId']) == id:
+                tasks += 1
+                if key['completed'] == True:
+                    completed += 1
+                    title.append(key['title'])
     print(f"Employee {name} is done with tasks({completed}/{tasks}):")
     (print("     {}".format(t)) for t in title)
