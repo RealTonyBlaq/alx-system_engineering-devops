@@ -26,4 +26,4 @@ if __name__ == "__main__":
                     if key['completed'] == True:
                         completed += 1
                         title.append(key['title'])
-    print(f"Employee {name} is done with tasks()")
+    print(f"Employee {name} is done with tasks({completed}/{tasks})")
