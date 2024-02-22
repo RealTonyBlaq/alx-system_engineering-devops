@@ -27,3 +27,4 @@ if __name__ == "__main__":
                 if dic['completed'] is True:
                     completed += 1
                     titles.append(dic['title'])
+                    
