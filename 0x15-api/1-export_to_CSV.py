@@ -23,8 +23,5 @@ if __name__ == "__main__":
         titles = []
         for dic in todos:
             if (dic['userId']) == id:
-                tasks += 1
-                if dic['completed'] is True:
-                    completed += 1
-                    titles.append(dic['title'])
-                    
+                
+        
