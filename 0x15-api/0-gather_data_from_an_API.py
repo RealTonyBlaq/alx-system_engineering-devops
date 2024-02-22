@@ -26,4 +26,4 @@ if __name__ == "__main__":
                     completed += 1
                     titles.append(dic['title'])
     print(f"Employee {name} is done with tasks({completed}/{tasks}):")
-    [print("     {}".format(title)) for title in titles]
+    [print("\t {}".format(title)) for title in titles]
