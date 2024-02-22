@@ -18,7 +18,8 @@ if __name__ == "__main__":
         url = "https://jsonplaceholder.typicode.com"
         name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
         todos = requests.get("{}/{}".format(url, "todos")).json()
-        export =
+        file = "USER_ID.csv"
         for dic in todos:
             if (dic['userId']) == id:
+                
                 
