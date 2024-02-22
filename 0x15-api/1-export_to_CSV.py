@@ -23,4 +23,4 @@ if __name__ == "__main__":
             if (dic['userId']) == id:
                 dump = (id, name, str(dic['completed']), dic['title'])
                 with open(file, '+a') as f:
-                    f.write(csv.writer.writ(dump))
+                    f.write(csv.writer(dump))
