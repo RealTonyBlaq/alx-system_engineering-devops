@@ -14,7 +14,7 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com"
-        employee = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
+        name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
         todos = requests.get("{}/{}".format(url, "todos")).json()
         tasks = 0
         tasks_completed = 0
@@ -26,4 +26,4 @@ if __name__ == "__main__":
                     if key['completed'] == True:
                         tasks_completed += 1
                         title.append(key['title'])
-    print
+    print("Employee {} ")
