@@ -7,6 +7,7 @@ import requests
 from sys import argv
 
 
+if __name__ == 
 id = int(argv[1])
 REST_API = "https://jsonplaceholder.typicode.com/users/{}".format(id)
 r = requests.get(REST_API)
