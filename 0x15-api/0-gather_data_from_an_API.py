@@ -8,6 +8,6 @@ from sys import argv
 
 
 id = int(argv[1])
-REST_AP = "https://jsonplaceholder.typicode.com/users/{}".format(id)
+REST_API = "https://jsonplaceholder.typicode.com/users/{}".format(id)
 r = requests.get(REST_API)
 print(r.text)
