@@ -22,6 +22,6 @@ if __name__ == "__main__":
         with open(file, '+a') as f:
             for dic in todos:
                 if (dic['userId']) == id:
-                    dump = '"{}","{}","{}","{}"'
+                    dump = '"{}","{}","{}","{}"\n'
                     f.write(dump.format(id, name,
                                         dic["completed"], dic["title"]))
