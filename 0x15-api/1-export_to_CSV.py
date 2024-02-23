@@ -15,7 +15,7 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com"
-        name = requests.get("{}/{}/{}".format(url, "users", id)).json()['name']
+        name = requests.get("{}/{}/{}".format(url, "users", id)).json()['username']
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "USER_ID.csv"
         with open(file, '+a') as f:
