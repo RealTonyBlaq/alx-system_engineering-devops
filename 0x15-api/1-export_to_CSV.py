@@ -15,11 +15,13 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com"
-        name = requests.get("{}/{}/{}".format(url, "users", id)).json()['username']
+        name = requests.get("{}/{}/{}".format(url, "users",
+                                              id)).json()['username']
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "USER_ID.csv"
         with open(file, '+a') as f:
             for dic in todos:
                 if (dic['userId']) == id:
-                    dump = '"{}","{}","{}","{}"'.format(id, name, dic["completed"], dic["title"])
+                    dump = '"{}","{}","{}","{}"'.format(id, name,
+                                                        dic["completed"], dic["title"])
                     f.write(dump)
