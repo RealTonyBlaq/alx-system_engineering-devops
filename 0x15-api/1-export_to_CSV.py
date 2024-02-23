@@ -23,4 +23,5 @@ if __name__ == "__main__":
             for dic in todos:
                 if (dic['userId']) == id:
                     dump = '"{}","{}","{}","{}"'
-                    f.write(dump.format(id, name, dic["completed"], dic["title"]))
+                    f.write(dump.format(id, name,
+                                        dic["completed"], dic["title"]))
