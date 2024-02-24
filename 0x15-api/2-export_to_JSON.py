@@ -3,9 +3,10 @@
 and returns information about his/her TODO list progress
 and exports it as a JSON file
 """
+
+import json
 import requests
 from sys import argv
-import json
 
 
 if __name__ == "__main__":
