@@ -13,9 +13,8 @@ if __name__ == "__main__":
     employees = requests.get("{}/{}".format(url, "users")).json()
     todos = requests.get("{}/{}".format(url, "todos")).json()
     export = {}
-    value = []
     for employee in employees:
-        
+        value = []
         for dic in todos:
             if dic.get('userId') == id:
                 new = {"task": dic.get('title'),
