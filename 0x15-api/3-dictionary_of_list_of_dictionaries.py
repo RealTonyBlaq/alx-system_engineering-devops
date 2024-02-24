@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" Script uses a REST API, for a given employee ID,
+""" Script uses a REST API, for all employees,
 and returns information about his/her TODO list progress
-and exports it as a JSON file
+and exports all as a JSON file
 """
 
 import json
@@ -11,7 +11,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: ./2-export_to_JSON.py <employee_ID>")
+        print("Usage: ./3-dictionary.py <employee_ID>")
         exit(1)
     else:
         id = int(argv[1])
