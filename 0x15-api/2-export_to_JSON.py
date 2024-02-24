@@ -11,7 +11,7 @@ import json
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: ./0-gather_data_from_an_API.py <employee_ID>")
+        print("Usage: ./2-export_to_JSON <employee_ID>")
         exit(1)
     else:
         id = int(argv[1])
