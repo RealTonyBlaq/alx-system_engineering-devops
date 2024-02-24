@@ -16,7 +16,7 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com"
-        name = requests.get("{}/{}/{}".format(url, "users",
+        username = requests.get("{}/{}/{}".format(url, "users",
                                               id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.csv".format(id)
@@ -25,4 +25,4 @@ if __name__ == "__main__":
             export_value = []
             for dic in todos:
                 if dic.get('userId') == id:
-                    new = {"task": dic.get('title'), "completed": dic.get('completed'), "username": dic.get('username')}
+                    new = {"task": dic.get('title'), "completed": dic.get('completed'), "username": username}
