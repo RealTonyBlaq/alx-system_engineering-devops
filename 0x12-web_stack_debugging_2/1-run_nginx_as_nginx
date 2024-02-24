@@ -2,5 +2,5 @@
 # Script fixes the container so that nginx runs as nginx user
 sudo service nginx stop
 sudo sed -i 's/user .*/user nginx;/' /etc/nginx/nginx.conf
-sudo sed -i 's/listen 80/listen 8080/g' /etc/nginx/sites-available/default
+sudo sed -i 's/listen 80/listen 8080/' /etc/nginx/sites-available/default
 sudo service nginx start
