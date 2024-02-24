@@ -25,7 +25,8 @@ if __name__ == "__main__":
             export_value = []
             for dic in todos:
                 if dic.get('userId') == id:
-                    new = {"task": dic.get('title'), "completed": dic.get('completed'), "username": username}
+                    new = {"task": dic.get('title'),
+                           "completed": dic.get('completed'), "username": username}
                     export_value.append(new)
             export['{}'.format(id)] = export_value
             f.write(json.dumps(export))
