@@ -22,10 +22,7 @@ if __name__ == "__main__":
         file = "{}.csv".format(id)
         export = {}
         with open(file, 'w') as f:
-            export_value = 
+            export_value = []
             for dic in todos:
                 if dic.get('userId') == id:
-                    dump = '"{}","{}","{}","{}"\n'
-                    f.write(dump.format(id, name,
-                                        dic.get("completed"),
-                                        dic.get("title")))
+                    
