@@ -21,7 +21,7 @@ if __name__ == "__main__":
                 new = {"task": dic.get('title'),
                     "completed": dic.get('completed'),
                     "username": username}
-                export_value.append(new)
+                value.append(new)
         export['{}'.format(id)] = value
     with open("todo_all_employees.json", 'w') as f:
         f.write(json.dumps(export))
