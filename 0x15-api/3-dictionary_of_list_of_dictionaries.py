@@ -14,10 +14,11 @@ if __name__ == "__main__":
         print("Usage: ./<script> <employee_ID>")
         exit(1)
     else:
-        id = int(argv[1])
+        id
         url = "https://jsonplaceholder.typicode.com"
         all = requests.get("{}/{}/{}".format(
             url, "users", id)).json()
+        print(all)
         """todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.json".format(id)
         with open(file, 'w') as f:
@@ -30,4 +31,4 @@ if __name__ == "__main__":
                            "username": username}
                     export_value.append(new)
             export['{}'.format(id)] = export_value
-            f.write(json.dumps(export))
+            f.write(json.dumps(export))"""
