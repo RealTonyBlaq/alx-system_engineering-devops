@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script fixes the container so that nginx runs as nginx user
-sudo sed -i 's/user *;/user nginx;/' /etc/nginx/co
-sudo 
+sudo sed -i 's/user *;/user nginx;/' /etc/nginx/nginx.conf
+sudo sed -i 's/
