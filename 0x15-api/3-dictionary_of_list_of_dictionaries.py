@@ -10,11 +10,9 @@ import requests
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com"
-    all = requests.get("{}/{}".format(
-        url, "users")).json()
+    all = requests.get("{}/{}".format(url, "users")).json()
     print(all)
     """todos = requests.get("{}/{}".format(url, "todos")).json()
-    file = "{}.json".format(id)
     with open(file, 'w') as f:
         export = {}
         export_value = []
