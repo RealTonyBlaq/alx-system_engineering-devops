@@ -10,14 +10,9 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    if len(argv) != 2:
-        print("Usage: ./<script> <employee_ID>")
-        exit(1)
-    else:
-        id
-        url = "https://jsonplaceholder.typicode.com"
-        all = requests.get("{}/{}/{}".format(
-            url, "users", id)).json()
+    url = "https://jsonplaceholder.typicode.com"
+    all = requests.get("{}/{}/{}".format(
+        url, "users", id)).json()
         print(all)
         """todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.json".format(id)
