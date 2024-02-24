@@ -18,7 +18,8 @@ if __name__ == "__main__":
         name = requests.get("{}/{}/{}".format(url, "users",
                                               id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
-        file = "{}.csv"
+        file = "{}.csv".format(id)
+        
         for dic in todos:
             if dic.get('userId') == id:
                 dump = '"{}","{}","{}","{}"\n'
