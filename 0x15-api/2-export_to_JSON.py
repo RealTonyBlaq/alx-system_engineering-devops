@@ -16,8 +16,8 @@ if __name__ == "__main__":
     else:
         id = int(argv[1])
         url = "https://jsonplaceholder.typicode.com"
-        username = requests.get("{}/{}/{}".format(url, "users",
-                                              id)).json().get('username')
+        username = requests.get("{}/{}/{}".format(
+            url, "users", id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.json".format(id)
         export = {}
