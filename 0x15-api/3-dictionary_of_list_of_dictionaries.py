@@ -13,7 +13,7 @@ if __name__ == "__main__":
     employees = requests.get("{}/{}".format(url, "users")).json()
     todos = requests.get("{}/{}".format(url, "todos")).json()
     export = {}
-    export_value = []
+    value = []
     for employee in employees:
         
         for dic in todos:
@@ -22,6 +22,6 @@ if __name__ == "__main__":
                     "completed": dic.get('completed'),
                     "username": username}
                 export_value.append(new)
-        export['{}'.format(id)] = export_value
+        export['{}'.format(id)] = value
     with open("todo_all_employees.json", 'w') as f:
         f.write(json.dumps(export))
