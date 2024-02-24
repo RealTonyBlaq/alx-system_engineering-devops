@@ -11,7 +11,7 @@ import json
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: ./2-export_to_JSON <employee_ID>")
+        print("Usage: ./2-export_to_JSON.py <employee_ID>")
         exit(1)
     else:
         id = int(argv[1])
@@ -21,7 +21,7 @@ if __name__ == "__main__":
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.json".format(id)
         with open(file, 'w') as f:
-            exporte = {}
+            export = {}
             export_value = []
             for dic in todos:
                 if dic.get('userId') == id:
@@ -29,5 +29,5 @@ if __name__ == "__main__":
                            "completed": dic.get('completed'),
                            "username": username}
                     export_value.append(new)
-            exporte['{}'.format(id)] = export_value
+            export['{}'.format(id)] = export_value
             f.write(json.dumps(exporte))
