@@ -28,3 +28,4 @@ if __name__ == "__main__":
                     new = {"task": dic.get('title'), "completed": dic.get('completed'), "username": username}
                     export_value.append(new)
             export['{}'.format(id)] = export_value
+            f.write(json.dumps)
