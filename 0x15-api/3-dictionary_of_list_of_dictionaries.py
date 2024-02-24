@@ -16,11 +16,12 @@ if __name__ == "__main__":
     for employee in employees:
         value = []
         userID = employee.get('id')
+        userName = employee.get('user')
         for dic in todos:
             if dic.get('userId') == userID:
                 new = {"task": dic.get('title'),
                     "completed": dic.get('completed'),
-                    "username": username}
+                    "username": }
                 value.append(new)
         export['{}'.format(id)] = value
     with open("todo_all_employees.json", 'w') as f:
