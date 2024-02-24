@@ -14,7 +14,7 @@ if __name__ == "__main__":
         print("Usage: ./2-export_to_JSON.py <employee_ID>")
         exit(1)
     else:
-        id = int(argv[1])
+        id = argv[1]
         url = "https://jsonplaceholder.typicode.com"
         username = requests.get("{}/{}/{}".format(
             url, "users", id)).json().get('username')
