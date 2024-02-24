@@ -25,4 +25,4 @@ if __name__ == "__main__":
             export_value = []
             for dic in todos:
                 if dic.get('userId') == id:
-                    new = {"task"}
+                    new = {"task": dic.get('title'),}
