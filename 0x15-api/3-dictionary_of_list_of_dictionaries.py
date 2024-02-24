@@ -12,8 +12,8 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com"
     all = requests.get("{}/{}".format(url, "users")).json()
     print(all)
-    """todos = requests.get("{}/{}".format(url, "todos")).json()
-    with open(file, 'w') as f:
+    todos = requests.get("{}/{}".format(url, "todos")).json()
+    with open("todo_all_employees.json", 'w') as f:
         export = {}
         export_value = []
         for dic in todos:
@@ -23,4 +23,4 @@ if __name__ == "__main__":
                        "username": username}
                 export_value.append(new)
         export['{}'.format(id)] = export_value
-        f.write(json.dumps(export))"""
+        f.write(json.dumps(export))
