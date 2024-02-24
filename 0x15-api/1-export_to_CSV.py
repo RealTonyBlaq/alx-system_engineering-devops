@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: ./0-gather_data_from_an_API.py <employee_ID>")
+        print("Usage: ./1-export_to_CSV.py <employee_ID>")
         exit(1)
     else:
         id = int(argv[1])
