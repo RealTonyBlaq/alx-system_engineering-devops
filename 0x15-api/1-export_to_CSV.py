@@ -21,7 +21,7 @@ if __name__ == "__main__":
         file = "{}.csv"
         for dic in todos:
             if dic.get('userId') == id:
-                    dump = '"{}","{}","{}","{}"\n'
-                    f.write(dump.format(id, name,
-                                        dic.get("completed"),
-                                        dic.get("title")))
+                dump = '"{}","{}","{}","{}"\n'
+                f.write(dump.format(id, name,
+                                    dic.get("completed"),
+                                    dic.get("title")))
