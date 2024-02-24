@@ -24,4 +24,5 @@ if __name__ == "__main__":
                 if dic.get('userId') == id:
                     dump = '"{}","{}","{}","{}"\n'
                     f.write(dump.format(id, name,
-                                        dic.get("completed"), dic.get("title")))
+                                        dic.get("completed"),
+                                        dic.get("title")))
