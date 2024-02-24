@@ -20,6 +20,7 @@ if __name__ == "__main__":
                                               id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.csv".format(id)
+        export
         with open(file, 'w') as f:
             for dic in todos:
                 if dic.get('userId') == id:
