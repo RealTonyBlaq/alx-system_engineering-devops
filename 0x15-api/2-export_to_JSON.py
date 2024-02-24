@@ -30,4 +30,4 @@ if __name__ == "__main__":
                            "username": username}
                     export_value.append(new)
             export['{}'.format(id)] = export_value
-            f.write(json.dumps(exporte))
+            f.write(json.dumps(export))
