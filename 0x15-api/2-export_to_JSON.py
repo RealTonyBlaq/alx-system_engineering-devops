@@ -20,8 +20,8 @@ if __name__ == "__main__":
             url, "users", id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.json".format(id)
-        export = {}
         with open(file, 'w') as f:
+            export = {}
             export_value = []
             for dic in todos:
                 if dic.get('userId') == id:
