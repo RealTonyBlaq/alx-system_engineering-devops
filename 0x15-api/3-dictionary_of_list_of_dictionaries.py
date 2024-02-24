@@ -14,12 +14,13 @@ if __name__ == "__main__":
     todos = requests.get("{}/{}".format(url, "todos")).json()
     export = {}
     export_value = []
+    for em
     for dic in todos:
         if dic.get('userId') == id:
-                new = {"task": dic.get('title'),
-                       "completed": dic.get('completed'),
-                       "username": username}
-                export_value.append(new)
-        export['{}'.format(id)] = export_value
+            new = {"task": dic.get('title'),
+                   "completed": dic.get('completed'),
+                   "username": username}
+            export_value.append(new)
+    export['{}'.format(id)] = export_value
     with open("todo_all_employees.json", 'w') as f:
         f.write(json.dumps(export))
