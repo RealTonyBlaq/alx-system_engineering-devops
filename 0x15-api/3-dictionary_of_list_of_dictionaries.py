@@ -15,8 +15,9 @@ if __name__ == "__main__":
     export = {}
     for employee in employees:
         value = []
+        userID = employee.get('id')
         for dic in todos:
-            if dic.get('userId') == id:
+            if dic.get('userId') == userID:
                 new = {"task": dic.get('title'),
                     "completed": dic.get('completed'),
                     "username": username}
