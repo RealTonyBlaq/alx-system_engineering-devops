@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Script uses a REST API, for a given employee ID,
 and returns information about his/her TODO list progress
-and exports it to CSV using a format
+and exports it as a JSON file
 """
 
 import requests
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         username = requests.get("{}/{}/{}".format(url, "users",
                                               id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
-        file = "{}.csv".format(id)
+        file = "{}.json".format(id)
         export = {}
         with open(file, 'w') as f:
             export_value = []
