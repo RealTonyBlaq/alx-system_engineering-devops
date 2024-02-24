@@ -19,10 +19,10 @@ if __name__ == "__main__":
                                               id)).json().get('username')
         todos = requests.get("{}/{}".format(url, "todos")).json()
         file = "{}.csv".format(id)
-        
-        for dic in todos:
-            if dic.get('userId') == id:
-                dump = '"{}","{}","{}","{}"\n'
-                f.write(dump.format(id, name,
-                                    dic.get("completed"),
-                                    dic.get("title")))
+        with open(file, 'w') as f:
+            for dic in todos:
+                if dic.get('userId') == id:
+                    dump = '"{}","{}","{}","{}"\n'
+                    f.write(dump.format(id, name,
+                                        dic.get("completed"),
+                                        dic.get("title")))
