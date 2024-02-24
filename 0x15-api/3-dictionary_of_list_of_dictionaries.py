@@ -11,7 +11,6 @@ import requests
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com"
     all = requests.get("{}/{}".format(url, "users")).json()
-    print(all)
     todos = requests.get("{}/{}".format(url, "todos")).json()
     with open("todo_all_employees.json", 'w') as f:
         export = {}
