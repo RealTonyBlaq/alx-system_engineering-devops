@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script creates a privileged user
+user="$1"
+sudo -u "$user" whoami
