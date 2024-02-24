@@ -11,7 +11,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: ./3-dictionary.py <employee_ID>")
+        print("Usage: ./<script> <employee_ID>")
         exit(1)
     else:
         id = int(argv[1])
