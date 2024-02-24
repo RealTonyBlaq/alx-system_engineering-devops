@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Script uses a REST API, for all employees,
 and returns information about his/her TODO list progress
-and exports all as a JSON file
+and exports all to a JSON file
 """
 
 import json
