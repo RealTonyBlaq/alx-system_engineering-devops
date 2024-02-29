@@ -38,8 +38,13 @@ backend web-backend
         server web-01 54.152.133.156:80 check
         server web-02 54.165.176.3:80 check
 
-frontend web-frontend
+frontend http-frontend
         bind *:80
+        mode http
+        redirect scheme https code 301 if !{ ssl_fc }
+        default_backend web-backend
+
+frontend https-frontend
         bind *:443 ssl crt /etc/letsencrypt/live/www.ifeanyiikpenyi.tech/newcert.pem
         reqadd X-Forwarded-Proto:\ https
         mode http
