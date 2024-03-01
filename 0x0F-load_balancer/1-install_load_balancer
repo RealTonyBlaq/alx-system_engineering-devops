@@ -15,4 +15,4 @@ sudo sed -i "36i\backend web-backend\n        balance roundrobin\n        server
 sudo sed -i "40i\frontend web-frontend\n        bind *:80\n        mode http\n        default_backend web-backend" /etc/haproxy/haproxy.cfg
 
 # Restarting the load balancer.
-sudo service haproxy start
+sudo service haproxy restart
