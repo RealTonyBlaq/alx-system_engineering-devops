@@ -1,24 +1,23 @@
-# Puppet uses strace to resolve a 500 error from apache
+# Puppet resolves a 500 error from apache
 
-package {'apache2':
+package { 'apache2':
     ensure  => 'installed',
 }
 
-service {'apache2':
+service { 'apache2':
     ensure  => running,
     enable  => true,
     require => Package['apache2'],
 }
 
-exec { 'strace_apache':
-    command     => "strace -f -o /tmp/apache_strace.log -p \$(pidof $apache_service)",
-    refreshonly => true,
-    subscribe   => Service[$apache_service],
+exec { 'fix_error':
+    command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+    path    => '/usr/local/bin/:/bin/'
 }
 
 # Restart Apache after fixing the issue
-service { $apache_service:
+service { 'apache2':
   ensure  => running,
   enable  => true,
-  require => Exec['analyze_and_fix'],
+  require => Package['apache2'],
 }
