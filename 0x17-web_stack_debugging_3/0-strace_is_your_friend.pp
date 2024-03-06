@@ -4,7 +4,9 @@ package { 'apache2':
     ensure  => 'installed',
 }
 
-package { 'strace'}
+package { 'strace':
+    ensure  => 'installed',
+}
 
 service { 'apache2':
     ensure  => running,
