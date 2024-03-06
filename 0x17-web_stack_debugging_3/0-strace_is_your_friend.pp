@@ -15,3 +15,16 @@ exec { 'strace_apache':
     refreshonly => true,
     subscribe   => Service[$apache_service],
 }
+
+exec { 'analyze_and_fix':
+  command     => "/path/to/your/analyze_and_fix_script.sh /tmp/apache_strace.log",
+  refreshonly => true,
+  subscribe   => Exec['strace_apache'],
+}
+
+# Restart Apache after fixing the issue
+service { $apache_service:
+  ensure  => running,
+  enable  => true,
+  require => Exec['analyze_and_fix'],
+}
