@@ -1,11 +1,11 @@
 # Puppet resolves a 500 error from apache
 
 package { 'apache2':
-    ensure  => installed,
+    ensure => installed,
 }
 
 package { 'strace':
-    ensure  => installed,
+    ensure => installed,
 }
 
 service { 'apache2':
@@ -22,6 +22,6 @@ exec { 'use_strace':
 
 exec { 'fix_error':
     command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-    path    => '/usr/local/bin/:/bin/'
+    path    => '/usr/local/bin/:/bin/',
 }
 
