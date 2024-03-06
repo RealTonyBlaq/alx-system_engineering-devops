@@ -15,7 +15,7 @@ service { 'apache2':
 }
 
 exec { 'use_strace':
-    command => 'strace -c -p \$()
+    command => 'strace -c -p \$(pgrep apache2 | head -n 1) -o apache_error.l
 }
 
 # Set the correct permissions for directories
