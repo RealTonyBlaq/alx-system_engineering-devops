@@ -14,7 +14,7 @@ service { 'apache2':
     require => Package['apache2'],
 }
 
- # Set the correct permissions for directories
+# Set the correct permissions for directories
 file { '/etc/apache2':
     ensure  => directory,
     recurse => true,
