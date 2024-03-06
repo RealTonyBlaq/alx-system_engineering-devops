@@ -12,6 +12,6 @@ service {'apache2':
 
 exec { 'strace_apache':
     command     => "strace -f -o /tmp/apache_strace.log -p \$(pidof $apache_service)",
-  refreshonly => true,
-  subscribe   => Service[$apache_service],
+    refreshonly => true,
+    subscribe   => Service[$apache_service],
 }
