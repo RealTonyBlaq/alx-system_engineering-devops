@@ -17,7 +17,7 @@ service { 'apache2':
 exec { 'use_strace':
     command  => 'strace -c -p \$(pgrep apache2 | head -n 1) -o apache_error.log',
     provider => 'shell',
-    require 
+    require  => Package['strace'],
 }
 
 # Set the correct permissions for directories
