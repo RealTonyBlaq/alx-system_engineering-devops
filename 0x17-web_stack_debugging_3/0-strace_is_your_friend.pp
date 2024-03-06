@@ -5,5 +5,7 @@ package {'apache2':
 }
 
 service {'apache2':
-    ensure
+    ensure  => running,
+    enable  => true,
+    require => Package['apache]
 }
