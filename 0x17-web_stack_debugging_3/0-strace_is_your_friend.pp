@@ -22,10 +22,10 @@ file { '/etc/apache2':
 }
 
 # Set the correct permissions for files
-  file { '/path/to/your/web/root':
+file { '/etc/apache2':
     ensure => file,
     mode   => '0644',
-  }
+}
 
 exec { 'fix_error':
     command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
