@@ -4,6 +4,8 @@ package { 'apache2':
     ensure  => 'installed',
 }
 
+package { 'strace'}
+
 service { 'apache2':
     ensure  => running,
     enable  => true,
@@ -15,9 +17,3 @@ exec { 'fix_error':
     path    => '/usr/local/bin/:/bin/'
 }
 
-# Restart Apache after fixing the issue
-service { 'apache2':
-  ensure  => running,
-  enable  => true,
-  require => Package['apache2'],
-}
