@@ -20,19 +20,6 @@ exec { 'use_strace':
     require  => Package['strace'],
 }
 
-# Set the correct permissions for directories
-file { '/etc/apache2':
-    ensure  => directory,
-    recurse => true,
-    mode    => '0755',
-}
-
-# Set the correct permissions for files
-file { '/etc/apache2':
-    ensure => file,
-    mode   => '0644',
-}
-
 exec { 'fix_error':
     command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
     path    => '/usr/local/bin/:/bin/'
