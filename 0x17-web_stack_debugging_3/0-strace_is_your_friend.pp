@@ -14,7 +14,9 @@ service { 'apache2':
     require => Package['apache2'],
 }
 
-
+exec { 'use_strace':
+    command => '
+}
 
 # Set the correct permissions for directories
 file { '/etc/apache2':
