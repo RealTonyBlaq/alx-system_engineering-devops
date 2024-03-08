@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 # Script fixes the container so that nginx runs as nginx user
 
-# Install necessary packages if not already installed
-sudo apt update
-sudo apt -y install nginx
-
 # Set the nginx user in the nginx.conf file
 sudo sed -i 's/user nginx;/user nginx;/' /etc/nginx/nginx.conf
 
