@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 # Script fixes the container so that nginx runs as nginx user
-
-# Set the nginx user in the nginx.conf file
-sudo sed -i 's/user nginx;/user nginx;/' /etc/nginx/nginx.conf
-
-# Configure Nginx to listen on all active IPs on port 8080
-sudo sed -i 's/listen\s*80;/listen 8080;/g' /etc/nginx/sites-available/default
-
-# Restart Nginx to apply the changes
+sudo apt update
+sudo apt -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo sed -i 's/user */user nginx;/' /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/' /etc/nginx/sites-available/default
 sudo service nginx restart
