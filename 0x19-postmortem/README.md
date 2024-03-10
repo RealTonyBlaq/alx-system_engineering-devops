@@ -19,4 +19,4 @@ To fix the outage, we accessed the server and read through Nginx's error log in 
 
 ### Preventive Measures:
 To prevent further outages of this nature in future, I suggested that we set up a monitoring agent like DataDog on the backup server to inform us about server health, possible errors, memory or network overloads, etc which could tamper with the performance of our application/website.
-Team members were also 
+Team members were also advised to reduce MTA's to its barest minimum
