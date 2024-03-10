@@ -15,4 +15,4 @@ We first revived the server that went down and then proceeded to fix the firewal
 ### Root Cause and Resolution:
 After a proper check, we discovered that the issue started when the first server went down due to an error in the Nginx configuration. As the server went down, the backup server, unknown to us had a firewall issue. It was denying access from port 80/TCP. It was then that we knew we were on a misleading investigation due to the debugging paths we had followed and what we thought the issue was at the time.
 
-To fix the outage, we accessed the server and 
+To fix the outage, we accessed the server and read through N
