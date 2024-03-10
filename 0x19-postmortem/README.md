@@ -14,4 +14,4 @@ The debugging was handled by the tech team which I am a part of.
 We first revived the server that went down and then proceeded to fix the firewall rule that was denying traffic to the second server
 
 ### Root Cause and Resolution:
-After a proper check, we discovered that the issue started when the first server went down due to an error in the Nginx configuration. As the server went down, the backup server, unknown to us had a firewall issue. It was deny 
+After a proper check, we discovered that the issue started when the first server went down due to an error in the Nginx configuration. As the server went down, the backup server, unknown to us had a firewall issue. It was deny access from port 80/TCP
