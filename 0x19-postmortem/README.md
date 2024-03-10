@@ -13,4 +13,4 @@ After the team was alerted, we proceeded to find the root cause of the outage. A
 We first revived the server that went down and then proceeded to fix the firewall rule that was denying traffic to the second server. My team and I followed due diligence to resolve the issue.
 
 ### Root Cause and Resolution:
-After a proper check, we discovered that the issue started when the first server went down due to an error in the Nginx configuration. As the server went down, the backup server, unknown to us had a firewall issue. It was denying access from port 80/TCP. It was then that we knew we were
+After a proper check, we discovered that the issue started when the first server went down due to an error in the Nginx configuration. As the server went down, the backup server, unknown to us had a firewall issue. It was denying access from port 80/TCP. It was then that we knew we were on a misleading investigation due to the 
