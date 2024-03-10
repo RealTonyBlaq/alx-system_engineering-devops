@@ -18,4 +18,4 @@ After a proper check, we discovered that the issue started when the first server
 To fix the outage, we accessed the server and read through Nginx's error log in `/var/log/nginx/` to determine which of the configuration files was causing the web-server to break down. After carefully checking, we noticed that in the `/etc/nginx/sites-available/default` file a line of code was commented out so we fixed that. We restarted the server and it was up and running. The backup server on the other hand wasn't running. We updated the firewall rules by allowing access to the server from ports 80/TCP and 8080/TCP. The server was restarted and everything was back to normal.
 
 ### Preventive Measures:
-To
+To prevent further outages of this nature in future, I suggest 
