@@ -3,4 +3,4 @@
 
 sudo sed -i 's/user */user nginx;/' /etc/nginx/nginx.conf
 sudo sed -i 's/80/8080/' /etc/nginx/sites-available/default
-sudo service nginx restart
+su nginx -s /bin/bash -c 'service nginx restart'
