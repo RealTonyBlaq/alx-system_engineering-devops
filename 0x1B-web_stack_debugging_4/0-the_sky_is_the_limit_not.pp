@@ -1,5 +1,7 @@
 # Puppet fixes an nginx server to process requests faster
 
+
+
 package { 'nginx':
     ensure => installed,
 }
