@@ -5,4 +5,7 @@ exec { 'increase_soft_limits':
     path    => '/usr/bin',
 }
 
-exec { 'increase_soft}
+exec { 'increase_hard_limits':
+    command => 'sed -i "$a\holberton hard nofile 65535" /etc/security/limits.conf',
+    path    => '/usr/bin',
+}
