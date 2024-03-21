@@ -5,7 +5,7 @@ user { 'holberton':
     managehome => true,
 }
 
-exec { 'increase':
-    command  => 'ulimit -n 1048576',
-    provider => 'shell',
+exec { 'increase_limit':
+    command  => 'sed -i "/holberton        hard/s/5/100000" /etc/security',
+    path => '/usr/local/bin:/usr/bin',
 }
