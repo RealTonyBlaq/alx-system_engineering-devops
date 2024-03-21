@@ -1,6 +1,8 @@
 # Puppet fixes an nginx server to process requests faster
 
-
+exec { 'update_apt':
+    command => '
+}
 
 package { 'nginx':
     ensure => installed,
