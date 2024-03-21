@@ -64,12 +64,10 @@ EOT
 ,
     require => Package['nginx'],
     notify  => Service['nginx'],
-  }
+}
 
-  service { 'nginx':
+service { 'nginx':
     ensure  => running,
     enable  => true,
     require => Package['nginx'],
-  }
-
 }
