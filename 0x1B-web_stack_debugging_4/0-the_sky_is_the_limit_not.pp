@@ -1,12 +1,10 @@
 # Puppet fixes an nginx server to process requests faster
 
-class nginx_fast_request_processing {
-
-  package { 'nginx':
+package { 'nginx':
     ensure => installed,
-  }
+}
 
-  file { '/etc/nginx/nginx.conf':
+file { '/etc/nginx/nginx.conf':
     ensure  => file,
     owner   => 'root',
     group   => 'root',
