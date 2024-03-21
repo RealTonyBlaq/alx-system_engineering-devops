@@ -6,5 +6,5 @@ exec { 'increase_limit':
 }
 
 exec { 'increase_soft':
-    command => 'sed -i "/holberton'
+    command => 'sed -i "/holberton        soft/s/4/'
 }
