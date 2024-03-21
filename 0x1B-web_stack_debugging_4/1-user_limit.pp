@@ -1,4 +1,4 @@
-# Puppet creates a user "holberton"
+# Puppet creates a user "holberton" and increases limits
 
 user { 'holberton':
     ensure     => present,
