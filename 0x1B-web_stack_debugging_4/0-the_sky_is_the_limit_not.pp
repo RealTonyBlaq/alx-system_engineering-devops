@@ -2,11 +2,12 @@
 
 exec { 'update_apt':
     command  => 'apt update',
-    provider => 'shell'
+    provider => 'shell',
 }
 
 package { 'nginx':
-    ensure => installed,
+    ensure  => installed,
+    require => Exec['update_apt']
 }
 
 file { '/etc/nginx/nginx.conf':
