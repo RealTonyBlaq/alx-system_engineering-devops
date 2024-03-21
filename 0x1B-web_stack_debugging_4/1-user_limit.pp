@@ -4,3 +4,5 @@ exec { 'increase_limit':
     command => 'sed -i "/holberton        hard/s/5/100000" /etc/security/limits.conf',
     path    => '/usr/bin',
 }
+
+exec {}
