@@ -2,5 +2,10 @@
 
 user { 'holberton':
     ensure     => present,
-    managehome => true
+    managehome => true,
+}
+
+exec { 'increase':
+    command  => 'ulimit -n 1048576',
+    provider => 'shell',
 }
