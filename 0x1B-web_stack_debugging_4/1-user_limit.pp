@@ -2,5 +2,5 @@
 
 user { 'holberton':
     ensure     => present,
-    managehome => true,
+    managehome => true
 }
