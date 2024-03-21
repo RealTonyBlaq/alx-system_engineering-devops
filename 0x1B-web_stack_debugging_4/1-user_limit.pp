@@ -1,4 +1,4 @@
-# Puppet creates a user "holberton" and increases limits
+# Puppet  user "holberton" and increases limits
 
 exec { 'increase_limit':
     command => 'sed -i "/holberton        hard/s/5/10000" /etc/security/limits.conf',
@@ -7,4 +7,5 @@ exec { 'increase_limit':
 
 exec { 'increase_soft':
     command => 'sed -i "/holberton        soft/s/4/20000" /etc/security/limits.conf',
+    path    => '/usr/bin',
 }
