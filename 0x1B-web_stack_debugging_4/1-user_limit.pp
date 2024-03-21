@@ -5,4 +5,6 @@ exec { 'increase_limit':
     path    => '/usr/bin',
 }
 
-exec {}
+exec { 'increase_soft':
+    command => 'sed -i "/holberton'
+}
