@@ -3,8 +3,8 @@ Description=Gunicorn instance to serve Airbnb content
 After=network.target
 
 [Service]
-User=your_username
-Group=your_group
+User=ubuntu
+Group=ubuntu
 WorkingDirectory=/path/to/your/app
 ExecStart=/usr/local/bin/gunicorn -w 3 -b 0.0.0.0:5003 -e /tmp/airbnb-error.log -a /tmp/airbnb-access.log 2-hbnb:app
 Restart=always
