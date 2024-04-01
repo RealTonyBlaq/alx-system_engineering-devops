@@ -45,7 +45,8 @@ server {
         add_header X-Served-By "427036-web-01";
 
         server_name _;
-        location /hbnb_static {        alias /data/web_static/current/;}
+        location /hbnb_static {        alias /data/web_static/current/;
+        }
 
         location /airbnb-onepage {
                 proxy_pass http://127.0.0.1:5000;
@@ -75,23 +76,3 @@ server {
         #       deny all;
         #}
 }
-
-
-# Virtual Host configuration for example.com
-#
-# You can move that to a different file under sites-available/ and symlink that
-# to sites-enabled/ to enable it.
-#
-#server {
-#       listen 80;
-#       listen [::]:80;
-#
-#       server_name example.com;
-#
-#       root /var/www/example.com;
-#       index index.html;
-#
-#       location / {
-#               try_files $uri $uri/ =404;
-#       }
-#}
