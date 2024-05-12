@@ -2,5 +2,5 @@
 # Check if Gunicorn is running
 if pgrep -x "gunicorn" > /dev/null
 then
-    kill -HUP $(pgrep gunicorn)
+    kill -HUP "$(pgrep gunicorn)"
 fi
